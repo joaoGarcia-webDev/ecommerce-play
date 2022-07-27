@@ -1,26 +1,32 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import {AuthContext} from "../../contexts/auth";
 
 const LoginPage = () => {
-    const [login, setLogin] = useState("");
+    const {authenticated, login} = useContext(AuthContext);
+
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('submit',{login, password});
+        console.log('submit',{email, password});
+
+        login(email, password);
     };
 
     return (
         <div id="login">
             <h1 className="head-title">Login do Sistema</h1>
             <form className="form-container" onSubmit={handleSubmit}>
+                <p>{String(authenticated)}</p>
                 <div className="input-field">
-                    <label htmlFor="login">Login</label>
+                    <label htmlFor="email">Email</label>
                     <input 
-                        type="text" 
-                        name="login" 
-                        id="login" 
-                        value={login} 
-                        onChange={(e)=> setLogin(e.target.value)} 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        value={email} 
+                        onChange={(e)=> setEmail(e.target.value)} 
                     />
                 </div>
                 <div className="input-field">
