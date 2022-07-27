@@ -2,7 +2,7 @@ import React,{useContext} from "react";
 import {AuthContext} from "../../contexts/auth";
 
 const Page = () => {
-    const {authenticated,logout} = useContext(AuthContext)
+    const {authenticated, logout} = useContext(AuthContext)
 
     const handleLogout = () => {
         logout();
@@ -11,7 +11,7 @@ const Page = () => {
         <>
         <h1>Page</h1>
         <p>{String(authenticated)}</p>
-        <button onclick={handleLogout}>Logout</button>
+        <button onClick={handleLogout}>Logout</button>
         </>
     )
 };
