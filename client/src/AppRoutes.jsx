@@ -13,11 +13,14 @@ import HomePage from './pages/HomePage';
 import {AuthContext} from "./contexts/auth";
 
 const AppRoutes = () => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null);
     const login = (login, password) => {
-        
-    }
-    const logout = () => {};
+        console.log('Login', {login, password});
+        setUser({id: '123', login: 'teste@teste.com'})
+    };
+    const logout = () => {
+        console.log('logout')
+    };
 
 
     return(
