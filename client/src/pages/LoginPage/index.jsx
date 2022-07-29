@@ -23,26 +23,43 @@ const LoginPage = () => {
                 <p className="login-text">Esta é uma página de administrador. Efetue o login para ter acesso ao sistema.</p>
                 <form className="form-container" onSubmit={handleSubmit}>
                     <div className="input-field">
-                        <label htmlFor="email">Email</label>
+                        <label className="" id="emailLabel" htmlFor="email">Email</label>
                         <input 
                             type="email" 
                             name="email" 
-                            id="email" 
+                            id="email"
                             value={email} 
-                            onChange={(e)=> setEmail(e.target.value)} 
+                            onChange={(e)=> setEmail(e.target.value)}
+                            onFocus={() => {
+                                document.getElementById('emailLabel').classList.add('focused');
+                            }}
+                            onBlur={() => {
+                                if (document.getElementById('email').value == '') {
+                                    document.getElementById('emailLabel').classList.remove('focused');
+                                }
+                            }}
                         />
                     </div>
                     <div className="input-field">
-                        <label htmlFor="password">Senha</label>
+                        <label className="" id="passLabel" htmlFor="password">Senha</label>
                         <input 
                             type="password" 
                             name="password" 
                             id="password" 
                             value={password} 
-                            onChange={(e)=> setPassword(e.target.value)}  />
+                            onChange={(e)=> setPassword(e.target.value)}
+                            onFocus={() => {
+                                document.getElementById('passLabel').classList.add('focused');
+                            }}
+                            onBlur={() => {
+                                if (document.getElementById('password').value == '') {
+                                    document.getElementById('passLabel').classList.remove('focused');
+                                }
+                            }}
+                        />
                     </div>
                     <div className="submit-btn btn">
-                        <button type="submit">Entrar</button>
+                        <button type="submit">LOGIN</button>
                     </div>
                 </form>
             </div>
