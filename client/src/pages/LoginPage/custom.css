@@ -73,7 +73,6 @@ h1.head-title{
     width: 100%;
     padding: .8em 0;
     background-color: #fc329b;
-    border: 2px solid var(--pink);
     color: #fff;
     cursor: pointer;
     transition: .3s;
