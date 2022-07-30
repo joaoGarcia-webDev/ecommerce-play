@@ -10,6 +10,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--light-black);
 }
 #home-page .head-contents .title{
@@ -22,27 +23,53 @@
     border: none;
     font-size: 1em;
     font-weight: 800;
+    height: 40px;
+    width: 100px;
     padding: 0 1.5em;
+    border-radius: 35px;
+    margin-right: 15px;
+}
+#home-page .crud-nav{
+    margin-top: 0;
+    display: flex;
+}
+#home-page .crud-nav .nav-title{
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    height: 50px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    color: var(--light-black);
 }
 #home-page .crud-nav ul{
     list-style: none;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    padding: .8em .5em;
     padding-inline-start: 0px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0 0 0 auto;
 }
 #home-page .crud-nav ul .crud-list{
-    width: 30%;
+    height: 100%;
+    width: 40%;
+    max-width: 200px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: 0;
 }
 #home-page .crud-nav ul .crud-list button.default{
     width: 100%;
     max-width: 200px;
-    height: 100%;
-    padding: 2em;
+    height: 80%;
+    padding: 0 .5em;
     border: none;
-    font-size: 1.3em;
+    border-radius: 35px;
+    font-size: 1em;
     font-weight: 800;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -54,6 +81,9 @@
 /* MEDIA FOR - MD -  */
 @media (min-width: 768px) {
     #home-page .crud-nav ul{
-        justify-content: space-between;
+        width: 40%;
+    }
+    #home-page .crud-nav ul .crud-list{
+        width: 30%;
     }
 }
