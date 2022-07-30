@@ -4,7 +4,7 @@ import {AuthContext} from "../../contexts/auth";
 import "./custom.css";
 
 const LoginPage = () => {
-    const {authenticated, login} = useContext(AuthContext);
+    const {login} = useContext(AuthContext);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -34,7 +34,7 @@ const LoginPage = () => {
                                 document.getElementById('emailLabel').classList.add('focused');
                             }}
                             onBlur={() => {
-                                if (document.getElementById('email').value == '') {
+                                if (document.getElementById('email').value === '') {
                                     document.getElementById('emailLabel').classList.remove('focused');
                                 }
                             }}
@@ -52,14 +52,14 @@ const LoginPage = () => {
                                 document.getElementById('passLabel').classList.add('focused');
                             }}
                             onBlur={() => {
-                                if (document.getElementById('password').value == '') {
+                                if (document.getElementById('password').value === '') {
                                     document.getElementById('passLabel').classList.remove('focused');
                                 }
                             }}
                         />
                     </div>
                     <div className="submit-btn btn">
-                        <button type="submit">LOGIN</button>
+                        <button className="default" type="submit">LOGIN</button>
                     </div>
                 </form>
             </div>

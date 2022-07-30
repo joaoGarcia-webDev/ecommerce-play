@@ -1,0 +1,59 @@
+#home-page{
+    display: flex;
+    justify-content: center;
+}
+#home-page .main-content{
+    max-width: 1280px;
+    width: 100%;
+}
+#home-page .head-contents{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-black);
+}
+#home-page .head-contents .title{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    margin-left: 15px;
+    color: #fff;
+}
+#home-page .head-contents button{
+    border: none;
+    font-size: 1em;
+    font-weight: 800;
+    padding: 0 1.5em;
+}
+#home-page .crud-nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding-inline-start: 0px;
+}
+#home-page .crud-nav ul .crud-list{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-page .crud-nav ul .crud-list button.default{
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    padding: 2em;
+    border: none;
+    font-size: 1.3em;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#home-page .crud-nav ul .crud-list button.default:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* MEDIA FOR - MD -  */
+@media (min-width: 768px) {
+    #home-page .crud-nav ul{
+        justify-content: space-between;
+    }
+}
